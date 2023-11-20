@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alumno\\Desktop\\Izan\\DI\\Tema 4\\Ejercicios4\\Superheroes\\Superheroes.csproj",
-      "projectName": "Superheroes",
-      "projectPath": "C:\\Users\\alumno\\Desktop\\Izan\\DI\\Tema 4\\Ejercicios4\\Superheroes\\Superheroes.csproj",
+      "projectUniqueName": "C:\\Users\\alumno\\Desktop\\Izan\\DI\\Tema 4\\Ejercicios4\\Superheroes\\superheroes.csproj",
+      "projectName": "superheroes",
+      "projectPath": "C:\\Users\\alumno\\Desktop\\Izan\\DI\\Tema 4\\Ejercicios4\\Superheroes\\superheroes.csproj",
       "packagesPath": "C:\\Users\\alumno\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\alumno\\Desktop\\Izan\\DI\\Tema 4\\Ejercicios4\\Superheroes\\obj\\",
       "projectStyle": "PackageReference",

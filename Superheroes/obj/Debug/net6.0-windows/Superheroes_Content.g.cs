@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/shield.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("shield.ico")]
 
 

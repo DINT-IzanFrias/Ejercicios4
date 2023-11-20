@@ -5,11 +5,25 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>assets\shield.ico</ApplicationIcon>
+    <ApplicationIcon>shield.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="assets\shield.ico" />
+    <None Remove="arrow.png" />
+    <None Remove="avengers.png" />
+    <None Remove="mafia.png" />
+    <None Remove="xmen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="shield.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="arrow.png" />
+    <Resource Include="avengers.png" />
+    <Resource Include="mafia.png" />
+    <Resource Include="xmen.png" />
   </ItemGroup>
 
 </Project>

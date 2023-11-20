@@ -13,44 +13,48 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Superheroes
+namespace superheroes
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        int contador = 0;
-        List<Superheroe> ejemplos = Superheroe.GetSamples();
+        private List<Superheroe> listaSuperheroes;
         public MainWindow()
         {
             InitializeComponent();
-            NombreS.DataContext = ejemplos.ToArray()[contador];
-            img.DataContext = ejemplos.ToArray()[contador];
-            UpdateDisplayText();
+            listaSuperheroes = Superheroe.GetSamples();
+            superheroeDockPanel.DataContext = listaSuperheroes.FirstOrDefault();
+            actualPosition.Text = "1";
+            totalPositions.Text = listaSuperheroes.Count.ToString();
         }
 
-        private void UpdateDisplayText()
+        private void leftImage_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            contadorS.Text = $"{contador+1}/{ejemplos.Count}";
-        }
-
-        private void anterior(object sender, RoutedEventArgs e)
-        {
-            if (contador > 0)
+            if (int.TryParse(actualPosition.Text, out int index))
             {
-                contador--;
-                    UpdateDisplayText();
+                index--;
+                if (index == 0)
+                {
+                    index = listaSuperheroes.Count;
+                }
+                superheroeDockPanel.DataContext = listaSuperheroes[index - 1];
+                actualPosition.Text = index.ToString();
             }
         }
 
-        private void siguiente(object sender, RoutedEventArgs e)
+        private void rightImage_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if (contador >1)
+            if (int.TryParse(actualPosition.Text, out int index))
             {
-                contador++;
-                UpdateDisplayText();
+                index++;
+                if (index > 3)
+                {
+                    index = 1;
+                }
+                superheroeDockPanel.DataContext = listaSuperheroes[index - 1];
+                actualPosition.Text = index.ToString();
             }
         }
+
+
     }
 }
